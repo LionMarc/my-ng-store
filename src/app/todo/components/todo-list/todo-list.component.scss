@@ -1,0 +1,9 @@
+:host {
+    flex: 1;
+    padding: 12px;
+    display: flex;
+
+    .table-container {
+        overflow: auto;
+    }
+}

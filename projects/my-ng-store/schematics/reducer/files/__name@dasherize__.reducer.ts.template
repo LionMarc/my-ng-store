@@ -1,0 +1,18 @@
+import { Injectable, Provider } from '@angular/core';
+
+import { MyNgReducer, MyNgState, MyNgAction, MY_NG_REDUCER } from 'my-ng-store';
+
+@Injectable()
+export class <%= classify(name) %>Reducer implements MyNgReducer {
+  public readonly actionTypes:string[] = [];
+
+  public update(state: MyNgState, action: MyNgAction): MyNgState {
+    return state;
+  }
+}
+
+export const <%= providerName %>: Provider = {
+  provide: MY_NG_REDUCER,
+  useClass: <%= classify(name) %>Reducer,
+  multi: true
+}; 

@@ -1,0 +1,5 @@
+import { MyNgAction } from 'my-ng-store';
+
+export class <%= classify(name) %>Action implements MyNgAction {
+  public readonly type:string='<%= name %>';
+}

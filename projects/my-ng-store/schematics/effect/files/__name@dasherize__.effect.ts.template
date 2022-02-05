@@ -1,0 +1,17 @@
+import { Injectable, Provider } from '@angular/core';
+
+import { MyNgEffect, MyNgStore, MyNgState, MyNgAction, MY_NG_EFFECT } from 'my-ng-store';
+
+@Injectable()
+export class <%= classify(name) %>Effect implements MyNgEffect {
+  public readonly actionTypes:string[] = [];
+
+  public process(store: MyNgStore, state: MyNgState, action: MyNgAction): void {
+  }
+}
+
+export const <%= providerName %>: Provider = {
+  provide: MY_NG_EFFECT,
+  useClass: <%= classify(name) %>Effect,
+  multi: true
+}; 

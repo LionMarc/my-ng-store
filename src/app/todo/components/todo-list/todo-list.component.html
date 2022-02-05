@@ -1,0 +1,18 @@
+<mat-card fxFlex fxLayout="column" fxLayoutAlign=" stretch">
+    <mat-card-title fxLayout="row" fxLayoutAlign=" center">
+        List of todos
+        <span fxFlex></span>
+        <button mat-raised-button color="primary" (click)="addTodo()">
+            Add Todo
+        </button>
+    </mat-card-title>
+    <mat-card-content fxFlex fxLayout="column" fxLayoutAlign=" stretch">
+        <div fxFlex fxLayout="column" fxLayoutAlign=" stretch" class="table-container">
+            <mat-table [dataSource]="todoList$" class="mat-elevation-z8" fxFlex>
+                <mat-text-column name="title"></mat-text-column>
+                <tr mat-header-row *matHeaderRowDef="['title']"></tr>
+                <tr mat-row *matRowDef="let row; columns: ['title'];"></tr>
+            </mat-table>
+        </div>
+    </mat-card-content>
+</mat-card>
