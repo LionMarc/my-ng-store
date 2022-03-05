@@ -14,11 +14,15 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { todoListReducerProvider } from './reducers/todo-list.reducer';
 import { todoCreationEffectProvider } from './effects/todo-creation.effect';
 import { TodoComponent } from './components/todo/todo.component';
+import { MyNgStoreModule } from 'my-ng-store';
+import { RouteTestingComponent } from './components/route-testing/route-testing.component';
+import { testingRouteProvider } from './navigation/testing.route';
 
 @NgModule({
   declarations: [
     TodoListComponent,
-    TodoComponent
+    TodoComponent,
+    RouteTestingComponent
   ],
   imports: [
     CommonModule,
@@ -30,11 +34,13 @@ import { TodoComponent } from './components/todo/todo.component';
     MatFormFieldModule,
     MatInputModule,
     FlexLayoutModule,
+    MyNgStoreModule,
     TodoRoutingModule
   ],
   providers: [
     todoListReducerProvider,
-    todoCreationEffectProvider
+    todoCreationEffectProvider,
+    testingRouteProvider
   ]
 })
 export class TodoModule { }

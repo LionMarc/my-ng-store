@@ -10,3 +10,6 @@ export * from './lib/my-ng-action';
 export * from './lib/my-ng-store.component';
 export * from './lib/my-ng-reducer';
 export * from './lib/my-ng-effect';
+export * from './lib/my-ng-route';
+export * from './lib/my-ng-store.module';
+export * from './lib/my-ng-route';

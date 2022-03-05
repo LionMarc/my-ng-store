@@ -25,6 +25,11 @@
             "description": "Generate an action.",
             "factory": "./action/index#action",
             "schema": "./action/schema.json"
+        },
+        "route": {
+            "description": "Generate a route.",
+            "factory": "./route/index#route",
+            "schema": "./route/schema.json"
         }
     }
 }

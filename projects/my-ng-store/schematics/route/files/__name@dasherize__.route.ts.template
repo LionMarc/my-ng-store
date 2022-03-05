@@ -1,0 +1,18 @@
+import { Injectable, Provider } from '@angular/core';
+
+import { MyNgRoute, MyNgState, MyNgAction, MY_NG_ROUTE } from 'my-ng-store';
+
+@Injectable()
+export class <%= classify(name) %>Route implements MyNgRoute {
+  public readonly actionType:string = '';
+
+  public getUrl(state: MyNgState, action: MyNgAction): string {
+    throw new Error('Method not implemented.');
+  }
+}
+
+export const <%= providerName %>: Provider = {
+  provide: MY_NG_ROUTE,
+  useClass: <%= classify(name) %>Route,
+  multi: true
+}; 

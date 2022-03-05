@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RouteTestingComponent } from './components/route-testing/route-testing.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 const routes: Routes = [
@@ -9,6 +10,10 @@ const routes: Routes = [
       {
         path: '',
         component: TodoListComponent
+      },
+      {
+        path: 'testing',
+        component: RouteTestingComponent
       }
     ]
   }

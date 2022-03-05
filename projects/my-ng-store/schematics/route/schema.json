@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsRoute",
+  "title": "Route schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the route.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to create the simple schematic within.",
+      "visible": false
+    },
+    "module": {
+      "type": "string",
+      "description": "The declaring NgModule.",
+      "visible": false
+    },
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      },
+      "visible": false
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
