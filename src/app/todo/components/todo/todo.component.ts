@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 import { MyNgStoreComponent, MyNgStore } from 'my-ng-store';
 
@@ -10,14 +10,14 @@ import { MyNgStoreComponent, MyNgStore } from 'my-ng-store';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoComponent extends MyNgStoreComponent {
-  public readonly formGroup: FormGroup = new FormGroup({});
+  public readonly formGroup: UntypedFormGroup = new UntypedFormGroup({});
 
   constructor(store: MyNgStore) {
     super(store);
 
     this.formGroup.addControl(
       'title',
-      new FormControl(undefined, Validators.required)
+      new UntypedFormControl(undefined, Validators.required)
     );
   }
 
