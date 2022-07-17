@@ -9,7 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "build:store": "ng build --project=my-ng-store && cd projects/my-ng-store && npm run build",
-    "link:store": "npm link ./dist/my-ng-store"
+    "link:store": "npm link ./dist/my-ng-store",
+    "build:navigation": "ng build --project=@mli/navigation",
+    "watch:navigation": "ng build --project=@mli/navigation --watch "
   },
   "private": true,
   "dependencies": {
